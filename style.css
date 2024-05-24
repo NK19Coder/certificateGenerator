@@ -1,0 +1,121 @@
+:root {
+    --dark-color: #212121;
+}
+
+body {
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: system-ui;
+    text-align: center;
+    font-size: 1.5em;
+    color: #212121;
+}
+
+label {
+    color: black;
+    display: block;
+    margin-top: 10px;
+}
+
+h4 {
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #212121;
+}
+
+h1 {
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #212121;
+}
+
+img {
+    border-radius: 150%;
+    height: 120px;
+}
+
+main {
+    max-width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main * {
+    margin-bottom: 12px;
+}
+
+input {
+    text-align: center;
+    font-size: large;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    text-transform: capitalize;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--dark-color) !important;
+}
+
+button {
+    background: #8bc34a;
+    color: #fff;
+    border: none;
+    font-size: 0.8em;
+    padding: 5px 15px;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    color: #6492f6;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-color);
+        color: #fff;
+    }
+    input,
+    input:active {
+        background: var(--dark-color);
+        border-color: #fff;
+        color: #fff;
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: #fff !important;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

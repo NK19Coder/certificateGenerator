@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style> 
+        body {
+            background-image: url('./back.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-attachment: fixed;
+        }
+        
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        main {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        marquee img {
+            height: 100px;
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <marquee> 
+           <img src="./logo.png" alt="vips Logo"> 
+           <img src="./logo.png" alt="vips Logo">
+        </marquee>
+        <br>
+        <label for="name">Type Your Name</label>
+        <input required type="text" name="name" autocomplete="name" placeholder="Enter your name" id="name" minlength="3" maxlength="40">
+        <label for="college">Type Your College Name</label>
+        <input required type="text" name="college" autocomplete="college" placeholder="Enter your college name" id="college" minlength="3" maxlength="40">
+        <button id="submitBtn">Get Certificate</button>
+        <br>
+    </main>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="./my.js"></script>
+</body>
+
+</html>
